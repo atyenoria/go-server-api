@@ -32,8 +32,10 @@ func StartGin() {
 	//mongodb user create
 	uc := user_controllers.NewUserController(getSession())
 	router.GET("/user", uc.GetUser)
-	router.GET("/message", uc.GetMessage)
-	router.POST("/message", uc.CreateMessage)
+	router.POST("/jwtowner", uc.JwtCreateOwner)
+	router.GET("/jwtclient", uc.JwtCreateclilent)
+	router.POST("/message", uc.GetMessage)
+
 	router.POST("/user", uc.CreateUser)
 	router.DELETE("/user/:id", uc.RemoveUser)
 

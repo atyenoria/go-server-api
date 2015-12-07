@@ -2,9 +2,6 @@ package main
 
 import (
 	"fmt"
-	"html"
-	"io"
-	"strings"
 	"time"
 
 	"github.com/gin-gonic/gin"

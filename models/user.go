@@ -11,7 +11,10 @@ type User struct {
 }
 
 type Message struct {
-	Id     bson.ObjectId `json:"id" bson:"_id"`
-	Theme  string        `json:"theme" bson:"theme"`
-	Detail string        `json:"detail" bson:"detail"`
+	Id   bson.ObjectId `json:"id" bson:"_id"`
+	Time string        `json:"time" bson:"time"`
+	Body string        `json:"body" bson:"body"`
+	User string        `json:"user" bson:"user"`
+	Room string        `json:"room" bson:"room"`
+	To   string        `json:"to" bson:"to"`
 }
